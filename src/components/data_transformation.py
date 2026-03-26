@@ -4,6 +4,7 @@ from dataclasses import dataclass
 import tensorflow as tf
 from src.exception import CustomException
 from src.logger import logging
+from src.utils import save_object
 
 @dataclass
 class DataTransformationConfig:
@@ -57,6 +58,13 @@ class DataTransformation:
             )
             logging.info("Train, Valid, and Test generators created successfully")
             
+            labels_path = os.path.join("artifacts", "class_labels.pkl")
+            save_object(
+                file_path = labels_path,
+                obj = train_generator.class_indices
+            )
+            logging.info("Saved class labels for future prediction")
+
             return (
                 train_generator,
                 valid_generator,
