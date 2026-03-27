@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chest Cancer Detection</title>
+    <style>
+        body {font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; background-color: #f0f2f5; margin-top: 50px;}
+        .card {background: white; padding: 30px; border-radius: 15px; display: inline-block; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 500px;}
+        h1{color: #1a73e8;}
+        .upload-btn {margin: 20px 0;}
+        img {max-width: 100%; height: auto; border-radius: 10px; margin-top: 20px; border: 2px solid #ddd;}
+        .result {font-size: 24px; color: #0056b3; margin-top: 25px; font-weight: bold; background: #cce5ff; padding: 20px; border-radius: 10px; border: 2px solid #b8daff; box-shadow: 0 2px 10px rgba(0, 123, 255, 0.1);}
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>CHest Cancer AI</h1>
+        <p>Upload a Chest X-ray image for instant diagnosis</p>
+
+        <form action="/predict" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" class="upload-btn" required>
+            <br>
+            <button type="submit" style="padding: 10px 20px; cursor: pointer; background: #1a73e8; color: white; border: none; border-radius: 5px;">
+                Analyze Image
+            </button>
+        </form>
+        {% if prediction %}
+            <div class="result">Diagnosis: {{ prediction }}</div>
+            <img src="{{ image_path }}" alt="Uploaded X-ray">
+        {% endif %}
+    </div>
+</body>
+</html>
