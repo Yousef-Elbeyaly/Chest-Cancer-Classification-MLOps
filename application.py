@@ -5,9 +5,7 @@ from src.pipeline.predict_pipeline import PredictPipeline
 from src.logger import logging
 from src.exception import CustomException
 
-application = Flask(__name__)
-app = application
-
+app = Flask(__name__)
 UPLOAD_FOLDER = "static/uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
@@ -37,4 +35,4 @@ def predict():
     
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=7860)
+    app.run(host="0.0.0.0", port=8080)
