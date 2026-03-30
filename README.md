@@ -35,3 +35,6 @@ Here is a preview of the web application in action:
 1. Clone the repo: `git clone https://github.com/Yousef-Elbeyaly/Chest-Cancer-Classification-MLOps.git`
 2. Install dependencies: `pip install -r requirements.txt`
 3. Run the app: `python app.py`
+
+### 📁 Test it yourself!
+Need an X-ray image to test? Download Sample Images from the [**samples folder**](./Test) (5 images of each cancer type).
