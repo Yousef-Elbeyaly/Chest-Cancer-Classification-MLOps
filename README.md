@@ -6,6 +6,13 @@
 Check out the live app on Hugging Face Spaces: 
 [**Click Here to Try the App**](https://huggingface.co/spaces/Yousef-Elbeyaly/cancer-detection)
 
+## 📷 Application Interface
+Here is a preview of the web application in action:
+
+<p align="center">
+  <img src="screenshots/app_screenshot.png" alt="App Screenshot" width="800">
+</p>
+
 ## 🛠️ Tech Stack
 - **Backend:** Flask (Python)
 - **AI Model:** TensorFlow / Keras (CNN)
